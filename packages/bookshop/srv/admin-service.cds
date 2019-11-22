@@ -13,6 +13,6 @@ annotate AdminService.Orders with @odata.draft.enabled;
 extend service AdminService with {
   entity OrderItems as select from my.OrderItems {
     *,
-    amount * book.price as netAmount : Decimal(9,2)
+    amount * book.price as netAmount @(Core.Computed) : Decimal(9,2)
   };
 }
