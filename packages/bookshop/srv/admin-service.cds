@@ -11,5 +11,8 @@ annotate AdminService.Orders with @odata.draft.enabled;
 
 // Temporary workaround for Fiori
 extend service AdminService with {
-  entity OrderItems as select from my.OrderItems;
+  entity OrderItems as select from my.OrderItems {
+    *,
+    amount * book.price as netAmount : Decimal(9,2)
+  };
 }
