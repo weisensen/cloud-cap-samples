@@ -1,7 +1,6 @@
 gen/
 edmx/
 schema.sql
-*.db
 
 bin/
 target/
@@ -18,7 +17,6 @@ node_modules/
 *.log*
 gc_history*
 hs_err*
-*.tgz
 
 default-env.json
 connection.properties
